@@ -25,10 +25,10 @@ print(diz)'''
 
 # 3) Scrivere un programma che prenda una lista di numeri come input e rimuove i duplicati dalla lista, lasciando solo i valori "unici". L'ordine degli elementi nella lista deve rimanere invariato
 
-l = input("Inserire lista di numeri separati dallo spazio: ")   # richiedo input
-par = l.split()                                                 # divido l'input 
+l = input("Inserire lista di numeri separati dallo spazio: ").replace(",",".")      # richiedo input e rimpiazzo le virgole coi punti per gestire i float
+par = l.split()                                                                     # divido l'input 
 lista = []
-for numeri in par:                                              # scorro tutti i numeri
+for numeri in par:                                                                  # scorro tutti i numeri
     if numeri not in lista:                                     
-        lista.append(numeri)                                    # se non è il lista lo aggiungo
+        lista.append(numeri)                                                        # se non è il lista lo aggiungo
 print(lista)
